@@ -8,23 +8,20 @@ public class newMoveJump : MonoBehaviour
     private float xInput, yInput;
 
     Rigidbody2D rb;
-
     SpriteRenderer sp;
+    [SerializeField] Transform feet;
 
-    public float jumpForce;
+    public float jumpForce = 15f;
+    public float extraJumps = 1;
+    bool isGrounded;
+    int jumpCount;
+    float jumpCoolDown;
     
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-
         sp = GetComponent<SpriteRenderer>();
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
     }
 
     // Update is called once per frame
@@ -46,14 +43,35 @@ public class newMoveJump : MonoBehaviour
         PlatformerMove();
     }
 
-    void Jump()
-    {
-        rb.velocity = Vector2.up * jumpForce;
-    }
-
     void PlatformerMove()
     {
         rb.velocity = new Vector2(moveSpeed * xInput, rb.velocity.y);
     }
 
+    void CheckGrounded()
+    {
+        if (Physics2D.OverlapCircle(feet.position, 0.5f))
+        {
+            isGrounded = true;
+            jumpCount = 0;
+            jumpCoolDown = Time.time + 0.2f;
+        }
+        else if (Time.time < jumpCoolDown)
+        {
+            isGrounded = true;
+        }
+        else
+        {
+            isGrounded = false;
+        }
+    }
+
+    void Jump()
+    {
+        if (isGrounded || jumpCount < extraJumps)
+        {
+            rb.velocity = Vector2.up * jumpForce;
+            jumpCount++;
+        }
+    }
 }
