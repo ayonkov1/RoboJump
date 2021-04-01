@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float moveSpeed = 5f;
+    public float moveSpeed = 0.2f;
 
     float xinput, yinput;
 
     Rigidbody2D rb;
     SpriteRenderer sp;
 
-    public int maxJumps = 2;
+    public int maxJumps = 1;
     public int jumpCount;
     public float jumpCooldown;
     bool isGrounded;
@@ -84,7 +84,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (DoubleTapTime > Time.time && lastKeyCode == KeyCode.A)
             {
-                StartCoroutine(Dash(-1f));
+                StartCoroutine(Dash(-0.1f));
             }
             else
             {
@@ -136,7 +136,7 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector2(rb.velocity.x, 0f);
         rb.AddForce(new Vector2(dashDistance + direction, 0f), ForceMode2D.Impulse);
         float gravity = rb.gravityScale;
-        rb.gravityScale = 0;
+        rb.gravityScale = 3f;
         yield return new WaitForSeconds(0.4f);
         isDashing = false;
         rb.gravityScale = gravity;
