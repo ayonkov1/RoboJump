@@ -375,7 +375,7 @@ GameObject:
   - component: {fileID: 326413340}
   - component: {fileID: 326413344}
   m_Layer: 0
-  m_Name: platformIndustrial_095
+  m_Name: Pushable Block
   m_TagString: pushable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
