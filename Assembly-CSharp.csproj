@@ -57,20 +57,20 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\PlayerDash.cs" />
      <Compile Include="Assets\Scripts\KillPlayer.cs" />
+     <Compile Include="Assets\Scripts\DoorTrigger.cs" />
      <Compile Include="Assets\Scripts\ReverseGravity.cs" />
      <Compile Include="Assets\Scripts\newMoveJump.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\moveCharacter.cs" />
+     <Compile Include="Assets\Scripts\DoorScript.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\PlayerPush.cs" />
      <Compile Include="Assets\Sharp Text Mesh\Script\SharpText_Demo.cs" />
      <Compile Include="Assets\Sharp Text Mesh\Script\SharpText.cs" />
      <Compile Include="Assets\Scripts\Player_X_Movement.cs" />
      <Compile Include="Assets\Scripts\PlayerDoubleJump.cs" />
-     <Compile Include="Assets\SwitchScript.cs" />
+     <Compile Include="Assets\Scripts\SwitchScript.cs" />
      <Compile Include="Assets\Scripts\Player_42_Movement.cs" />
-     <Compile Include="Assets\Scripts\DoorScript.cs" />
-     <Compile Include="Assets\Scripts\DoorTrigger.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
