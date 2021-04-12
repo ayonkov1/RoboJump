@@ -218,10 +218,11 @@ GameObject:
   - component: {fileID: 161772170}
   - component: {fileID: 161772169}
   - component: {fileID: 161772168}
+  - component: {fileID: 161772175}
   - component: {fileID: 161772167}
-  - component: {fileID: 161772166}
   - component: {fileID: 161772172}
   - component: {fileID: 161772174}
+  - component: {fileID: 161772166}
   m_Layer: 0
   m_Name: Subject42
   m_TagString: Subject42
@@ -252,12 +253,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 161772165}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 102beb4da5d61ee4390dd822d92da77b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 5
+  maxJumps: 1
+  jumpCount: 0
+  jumpCooldown: 0
+  jumpForce: 8
   feet: {fileID: 2054513214}
   groundLayer:
     serializedVersion: 2
@@ -269,7 +273,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 161772165}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f3f73e61129355449b21c33112061358, type: 3}
   m_Name: 
@@ -426,6 +430,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bca7350150208484daacaff66566edea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &161772175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 161772165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05c09baeef0a1d64ca34c45c289af0b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 0.2
 --- !u!1 &198294146
 GameObject:
   m_ObjectHideFlags: 0
@@ -18150,6 +18167,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 102beb4da5d61ee4390dd822d92da77b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxJumps: 1
+  jumpCount: 0
+  jumpCooldown: 0
   jumpForce: 5
   feet: {fileID: 198294147}
   groundLayer:

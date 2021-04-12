@@ -6,29 +6,57 @@ public class PlayerDoubleJump : MonoBehaviour
 {
     Rigidbody2D rb;
 
-    public float jumpForce = 10;
+    public int maxJumps = 1;
+    public int jumpCount;
+    public float jumpCooldown;
     bool isGrounded;
+
+    public float jumpForce = 8f;
+
     public Transform feet;
     public LayerMask groundLayer;
 
-    void Jump()
+    private void Awake()
     {
-        rb.velocity = Vector2.up * jumpForce;
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    public void Update()
+    void CheckGrounded()
+    {
+        if (Physics2D.OverlapCircle(feet.position, 0.2f, groundLayer))
+        {
+            isGrounded = true;
+            jumpCount = 0;
+            jumpCooldown = Time.time + 0.2f;
+        }
+        else if (Time.time < jumpCooldown)
+        {
+            isGrounded = true;
+            jumpCooldown = 0;
+        }
+        else
+        {
+            isGrounded = false;
+        }
+    }
+
+    void Jump()
+    {
+        if (isGrounded || jumpCount < maxJumps)
+        {
+            rb.velocity = Vector2.up * jumpForce;
+            jumpCount++;
+
+        }
+    }
+
+    void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Jump();
         }
-    }
 
-    public void FixedUpdate()
-    {
-
-
-        isGrounded = Physics2D.OverlapCircle(feet.position, 0.2f, groundLayer);
-        isGrounded = true;
+        CheckGrounded();
     }
 }

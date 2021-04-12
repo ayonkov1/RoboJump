@@ -88,7 +88,7 @@ public class PlayerMovement : MonoBehaviour
             }
             else
             {
-                DoubleTapTime = Time.time + 0.5f;
+                DoubleTapTime = Time.time + 0.4f;
             }
             lastKeyCode = KeyCode.A;
         }
@@ -98,7 +98,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (DoubleTapTime > Time.time && lastKeyCode == KeyCode.D)
             {
-                StartCoroutine(Dash(1f));
+                StartCoroutine(Dash(0.1f));
             }
             else
             {
