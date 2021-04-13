@@ -303,7 +303,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 82708336}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.42, y: -2.88, z: 0}
+  m_LocalPosition: {x: -9.42, y: -3.77, z: 0}
   m_LocalScale: {x: 2.6271, y: 2.6271, z: 2.6271}
   m_Children:
   - {fileID: 1631471920}
@@ -360,11 +360,8 @@ GameObject:
   - component: {fileID: 161772171}
   - component: {fileID: 161772170}
   - component: {fileID: 161772169}
-  - component: {fileID: 161772168}
-  - component: {fileID: 161772175}
   - component: {fileID: 161772167}
   - component: {fileID: 161772172}
-  - component: {fileID: 161772174}
   - component: {fileID: 161772166}
   m_Layer: 0
   m_Name: Subject42
@@ -380,15 +377,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 161772165}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e232f651b638e2743bc8709d8d1c9fe2, type: 3}
+  m_Script: {fileID: 11500000, guid: 05c09baeef0a1d64ca34c45c289af0b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0.2
-  feet: {fileID: 2054513214}
-  jumpForce: 15
-  extraJumps: 1
 --- !u!114 &161772167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -405,28 +399,6 @@ MonoBehaviour:
   jumpCount: 0
   jumpCooldown: 0
   jumpForce: 8
-  feet: {fileID: 2054513214}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 256
---- !u!114 &161772168
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 161772165}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3f73e61129355449b21c33112061358, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 0.2
-  maxJumps: 1
-  jumpCount: 0
-  jumpCooldown: 0
-  jumpForce: 15
-  dashDistance: 15
   feet: {fileID: 2054513214}
   groundLayer:
     serializedVersion: 2
@@ -561,31 +533,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &161772174
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 161772165}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bca7350150208484daacaff66566edea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &161772175
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 161772165}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05c09baeef0a1d64ca34c45c289af0b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 0.2
 --- !u!1 &198294146
 GameObject:
   m_ObjectHideFlags: 0
@@ -18458,11 +18405,9 @@ GameObject:
   - component: {fileID: 1878370410}
   - component: {fileID: 1878370409}
   - component: {fileID: 1878370408}
-  - component: {fileID: 1878370407}
-  - component: {fileID: 1878370406}
-  - component: {fileID: 1878370405}
   - component: {fileID: 1878370404}
   - component: {fileID: 1878370403}
+  - component: {fileID: 1878370405}
   m_Layer: 0
   m_Name: SubjectX
   m_TagString: Subject42
@@ -18505,57 +18450,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1878370402}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e232f651b638e2743bc8709d8d1c9fe2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 0.2
-  feet: {fileID: 198294147}
-  jumpForce: 15
-  extraJumps: 1
---- !u!114 &1878370406
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1878370402}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 102beb4da5d61ee4390dd822d92da77b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxJumps: 1
-  jumpCount: 0
-  jumpCooldown: 0
-  jumpForce: 5
-  feet: {fileID: 198294147}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 256
---- !u!114 &1878370407
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1878370402}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3f73e61129355449b21c33112061358, type: 3}
+  m_Script: {fileID: 11500000, guid: 202dc75065941c64f9e5ecca35aff71d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0.2
-  maxJumps: 1
-  jumpCount: 0
-  jumpCooldown: 0
-  jumpForce: 15
   dashDistance: 15
-  feet: {fileID: 198294147}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 256
 --- !u!50 &1878370408
 Rigidbody2D:
   serializedVersion: 4

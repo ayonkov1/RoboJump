@@ -35,14 +35,33 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        xinput = Input.GetAxis("Horizontal");
-        /*yinput = Input.GetAxis("Vertical");*/
+        /*xinput = Input.GetAxis("Horizontal");
+        *//*yinput = Input.GetAxis("Vertical");*//*
 
-        transform.Translate(xinput * moveSpeed, yinput * moveSpeed, 0);
+        transform.Translate(xinput * moveSpeed, yinput * moveSpeed, 0);*/
 
+        PlayerMoveLeft();
+        PlayerMoveRight();
         PlatformerMove();
         FlipPlayer();
     }
+
+    void PlayerMoveLeft()
+    {
+        if (Input.GetKey(KeyCode.A))
+        {
+            rb.velocity = Vector2.left * moveSpeed;
+        } // End of IF Statement
+    }// End of PlayerMoveLeft
+
+    void PlayerMoveRight()
+    {
+        if (Input.GetKey(KeyCode.D))
+        {
+            rb.velocity = Vector2.right * moveSpeed;
+        }
+    }
+
 
     void CheckGrounded()
     {

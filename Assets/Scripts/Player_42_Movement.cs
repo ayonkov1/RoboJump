@@ -17,16 +17,32 @@ public class Player_42_Movement : MonoBehaviour
         sp = GetComponent<SpriteRenderer>();
     }
 
-    // Update is called once per frame
+    // Update is called once per fram
+
     void FixedUpdate()
     {
         xinput = Input.GetAxis("Horizontal");
-        /*yinput = Input.GetAxis("Vertical");*/
 
         transform.Translate(xinput * moveSpeed, yinput * moveSpeed, 0);
 
+
         PlatformerMove();
         FlipPlayer();
+    }
+
+    void PlayerMoveLeft()
+    {
+        if (Input.GetKey(KeyCode.A))
+        {
+            rb.velocity = Vector2.left * moveSpeed;
+        } 
+    }
+    void PlayerMoveRight()
+    {
+        if (Input.GetKey(KeyCode.D))
+        {
+            rb.velocity = Vector2.right * moveSpeed;
+        }
     }
 
     void PlatformerMove()
