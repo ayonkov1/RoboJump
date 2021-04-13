@@ -79,6 +79,34 @@ public class PlayerMovement : MonoBehaviour
             Jump();
         }
 
+        // Dashing left
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            if (DoubleTapTime > Time.time && lastKeyCode == KeyCode.A)
+            {
+                StartCoroutine(Dash(-0.1f));
+            }
+            else
+            {
+                DoubleTapTime = Time.time + 0.4f;
+            }
+            lastKeyCode = KeyCode.A;
+        }
+
+        // Dashing right
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            if (DoubleTapTime > Time.time && lastKeyCode == KeyCode.D)
+            {
+                StartCoroutine(Dash(0.1f));
+            }
+            else
+            {
+                DoubleTapTime = Time.time + 0.5f;
+            }
+            lastKeyCode = KeyCode.D;
+        }
+
         CheckGrounded();
     }
 
