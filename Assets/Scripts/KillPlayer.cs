@@ -11,6 +11,8 @@ public class KillPlayer : MonoBehaviour
         if (collision.CompareTag("Subject42"))
         {
             SceneManager.LoadScene(0);
+
+            FindObjectOfType<AudioManager>().Play("PlayerDeath");
         }
     }
 

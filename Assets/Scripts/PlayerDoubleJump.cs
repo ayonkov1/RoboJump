@@ -28,6 +28,7 @@ public class PlayerDoubleJump : MonoBehaviour
             isGrounded = true;
             jumpCount = 0;
             jumpCooldown = Time.time + 0.2f;
+            FindObjectOfType<AudioManager>().Play("GroundCheck");
         }
         else if (Time.time < jumpCooldown)
         {
@@ -46,7 +47,7 @@ public class PlayerDoubleJump : MonoBehaviour
         {
             rb.velocity = Vector2.up * jumpForce;
             jumpCount++;
-
+            FindObjectOfType<AudioManager>().Play("DoubleJump");
         }
     }
 
