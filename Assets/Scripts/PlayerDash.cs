@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class PlayerDash : MonoBehaviour
 {
+    float xinput;
+
     public float moveSpeed = 0.2f;
 
-    public float dashDistance = 8f;
+    public float dashDistance = 3f;
     bool isDashing;
     float DoubleTapTime;
     KeyCode lastKeyCode;
@@ -22,6 +24,7 @@ public class PlayerDash : MonoBehaviour
 
     void Update()
     {
+        xinput = Input.GetAxis("SubjectX");
 
         // Dashing left
         if (Input.GetKeyDown(KeyCode.RightArrow))
@@ -52,13 +55,21 @@ public class PlayerDash : MonoBehaviour
         }
     }
 
+    void PlatformerMove()
+    {
+        if (!isDashing)
+        {
+            rb.velocity = new Vector2(moveSpeed * xinput, rb.velocity.y);
+        }
+    }
+
     IEnumerator Dash(float direction)
     {
         isDashing = true;
         rb.velocity = new Vector2(rb.velocity.x, 0f);
         rb.AddForce(new Vector2(dashDistance + direction, 0f), ForceMode2D.Impulse);
         float gravity = rb.gravityScale;
-        rb.gravityScale = 3f;
+        rb.gravityScale = 0f;
         yield return new WaitForSeconds(0.4f);
         isDashing = false;
         rb.gravityScale = gravity;

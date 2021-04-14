@@ -21,28 +21,13 @@ public class Player_42_Movement : MonoBehaviour
 
     void FixedUpdate()
     {
-        xinput = Input.GetAxis("Horizontal");
+        xinput = Input.GetAxis("Subject42");
 
         transform.Translate(xinput * moveSpeed, yinput * moveSpeed, 0);
 
 
         PlatformerMove();
         FlipPlayer();
-    }
-
-    void PlayerMoveLeft()
-    {
-        if (Input.GetKey(KeyCode.A))
-        {
-            rb.velocity = Vector2.left * moveSpeed;
-        } 
-    }
-    void PlayerMoveRight()
-    {
-        if (Input.GetKey(KeyCode.D))
-        {
-            rb.velocity = Vector2.right * moveSpeed;
-        }
     }
 
     void PlatformerMove()
