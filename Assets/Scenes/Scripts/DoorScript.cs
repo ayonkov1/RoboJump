@@ -16,23 +16,27 @@ public class DoorScript : MonoBehaviour {
 
 	public void DoorOpens()
 	{
-		anim.SetBool ("Opens", true);
+        GetComponent<BoxCollider2D>().isTrigger = true;
+        anim.SetBool ("Opens", true);
 		}
 
 	public void DoorCloses()
 	{
-		anim.SetBool ("Opens", false);
+        GetComponent<BoxCollider2D>().isTrigger = false;
+        anim.SetBool ("Opens", false);
 	}
 
 	void CollEnable()
 	{
 		GetComponent<Collider2D>().enabled = true;
-	}
+        
+    }
 
 	void CollDisable()
 	{
 		GetComponent<Collider2D>().enabled = false;
-	}
+        
+    }
 
 
 

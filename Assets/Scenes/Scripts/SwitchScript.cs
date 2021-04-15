@@ -23,7 +23,7 @@ public class SwitchScript : MonoBehaviour
         anim.SetBool("GoDown", true);
         foreach (DoorTrigger trigger in doorTrig)
         {
-
+            
             trigger.Toggle(true);
 
         }
