@@ -13,6 +13,8 @@ public class KillPlayer : MonoBehaviour
             FindObjectOfType<AudioManager>().Play("PlayerDeath");
 
             SceneManager.LoadScene(0);
+            FindObjectOfType<MainMenu>().enabled = false;
+            //FindObjectOfType<DeathMenu>().enabled = true;
         }
     }
 }
