@@ -26,14 +26,15 @@ public class PlayerDoubleJump : MonoBehaviour
         if (Physics2D.OverlapCircle(feet.position, 0.2f, groundLayer))
         {
             isGrounded = true;
+            
             jumpCount = 0;
             jumpCooldown = Time.time + 0.2f;
-            FindObjectOfType<AudioManager>().Play("GroundCheck");
         }
         else if (Time.time < jumpCooldown)
         {
             isGrounded = true;
             jumpCooldown = 0;
+            
         }
         else
         {
@@ -47,7 +48,7 @@ public class PlayerDoubleJump : MonoBehaviour
         {
             rb.velocity = Vector2.up * jumpForce;
             jumpCount++;
-            FindObjectOfType<AudioManager>().Play("DoubleJump");
+            jumpCooldown = 0;
         }
     }
 
@@ -56,6 +57,7 @@ public class PlayerDoubleJump : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Jump();
+            FindObjectOfType<AudioManager>().Play("DoubleJump");
         }
 
         CheckGrounded();

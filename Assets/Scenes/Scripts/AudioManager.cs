@@ -14,8 +14,6 @@ public class AudioManager : MonoBehaviour
     public void Start()
     {
 		Play("Theme");
-        Play("PlayerDeath");
-        Play("DoubleJump");
     }
 
     void Awake()

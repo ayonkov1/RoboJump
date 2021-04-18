@@ -36,6 +36,7 @@ public class DashMove : MonoBehaviour
                 if (timeSinceLastPress <= DOUBLE_PRESS_TIME)
                 {
                     Instantiate(dashEffect, transform.position, Quaternion.identity);
+                    FindObjectOfType<AudioManager>().Play("Dash");
                     direction = 1;
 
                 }
@@ -48,7 +49,8 @@ public class DashMove : MonoBehaviour
                 if (timeSinceLastPress <= DOUBLE_PRESS_TIME)
                 {
                     Instantiate(dashEffect, transform.position, Quaternion.identity);
-                direction = 2;
+                    FindObjectOfType<AudioManager>().Play("Dash");
+                    direction = 2;
                 }
             }
         } else

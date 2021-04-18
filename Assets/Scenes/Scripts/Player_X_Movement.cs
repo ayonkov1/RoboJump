@@ -5,8 +5,6 @@ using UnityEngine;
 public class Player_X_Movement : MonoBehaviour
 {
     float xinput, yinput;
-
-    newDash dash; 
     bool isDashing;
 
     public float moveSpeed = 0.2f;
@@ -18,7 +16,6 @@ public class Player_X_Movement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         sp = GetComponent<SpriteRenderer>();
-        dash = GetComponent<newDash>();
     }
 
 
@@ -26,11 +23,7 @@ public class Player_X_Movement : MonoBehaviour
     {
         xinput = Input.GetAxis("SubjectX");
 
-        if (!dash.startDelay)
-        {
-            transform.Translate(xinput * moveSpeed, yinput * moveSpeed, 0);
-        }
-        
+        transform.Translate(xinput * moveSpeed, yinput * moveSpeed, 0);
 
         FlipPlayer();
     }

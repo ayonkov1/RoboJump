@@ -8,11 +8,11 @@ public class KillPlayer : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Subject42"))
+        if (collision.CompareTag("Subject42") || collision.CompareTag("SubjectX"))
         {
-            SceneManager.LoadScene(0);
-
             FindObjectOfType<AudioManager>().Play("PlayerDeath");
+
+            SceneManager.LoadScene(0);
         }
     }
 }

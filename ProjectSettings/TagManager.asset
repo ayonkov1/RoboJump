@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - pushable
+  - Subject42
+  - platform
+  - SubjectX
   layers:
   - Default
   - TransparentFX
