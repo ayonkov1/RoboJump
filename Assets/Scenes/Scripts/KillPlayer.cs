@@ -8,13 +8,15 @@ public class KillPlayer : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
+        int scene = SceneManager.GetActiveScene().buildIndex;
+        
+
         if (collision.CompareTag("Subject42") || collision.CompareTag("SubjectX"))
         {
             FindObjectOfType<AudioManager>().Play("PlayerDeath");
 
-            SceneManager.LoadScene(0);
-            FindObjectOfType<MainMenu>().enabled = false;
-            //FindObjectOfType<DeathMenu>().enabled = true;
+            SceneManager.LoadScene(scene);
         }
     }
 }
