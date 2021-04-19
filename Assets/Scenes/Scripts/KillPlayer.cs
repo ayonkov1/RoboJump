@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class KillPlayer : MonoBehaviour
 {
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    [System.Obsolete]
+    public void OnTriggerEnter2D(Collider2D collision)
     {
 
         int scene = SceneManager.GetActiveScene().buildIndex;
@@ -15,8 +15,9 @@ public class KillPlayer : MonoBehaviour
         if (collision.CompareTag("Subject42") || collision.CompareTag("SubjectX"))
         {
             FindObjectOfType<AudioManager>().Play("PlayerDeath");
-
             SceneManager.LoadScene(scene);
         }
     }
+
+    
 }

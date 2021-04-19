@@ -9,7 +9,11 @@ public class VideoEnded : MonoBehaviour
     public VideoPlayer vid;
 
 
-    void Start() { vid.loopPointReached += CheckOver; }
+    void Start() 
+    {
+        vid.Play();
+        vid.loopPointReached += CheckOver;
+    }
 
     void CheckOver(UnityEngine.Video.VideoPlayer vp)
     {

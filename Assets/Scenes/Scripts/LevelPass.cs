@@ -12,11 +12,18 @@ public class LevelPass : MonoBehaviour
 
         if (collision.CompareTag("Subject42"))
         {
-            Debug.Log("Subjects have entered passing checkpoint!");
+            if (currentScene == 3)
+            {
+                SceneManager.LoadScene(4);
+            }
+            else
+            {
+                Debug.Log("Subjects have entered passing checkpoint!");
 
-            SceneManager.LoadScene(currentScene + 1);
+                SceneManager.LoadScene(currentScene + 1);
 
-            FindObjectOfType<AudioManager>().Play("LevelPassed");
+                FindObjectOfType<AudioManager>().Play("LevelPassed");
+            }
         }
     }
 }
