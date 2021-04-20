@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1090123521631423849
+--- !u!1 &3037858687666672776
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1090123521631423847}
-  - component: {fileID: 1090123521631423846}
+  - component: {fileID: 3037858687666672774}
+  - component: {fileID: 3037858687666672775}
+  - component: {fileID: 3037858687666672773}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -17,13 +18,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1090123521631423847
+--- !u!4 &3037858687666672774
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1090123521631423849}
+  m_GameObject: {fileID: 3037858687666672776}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.7552622, y: 5.5288568, z: 0.308446}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -31,13 +32,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1090123521631423846
+--- !u!114 &3037858687666672775
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1090123521631423849}
+  m_GameObject: {fileID: 3037858687666672776}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1dd1916b4e7ece647a2e788f7a597a0b, type: 3}
@@ -47,10 +48,45 @@ MonoBehaviour:
   sounds:
   - name: Theme
     clip: {fileID: 8300000, guid: 76907a69e018333408845b0f691b10cc, type: 3}
-    volume: 0
-    volumeVariance: 0
-    pitch: 0
-    pitchVariance: 0
+    volume: 0.094
+    volumeVariance: 0.178
+    pitch: 0.32
+    pitchVariance: 0.105
     loop: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
+  - name: PlayerDeath
+    clip: {fileID: 8300000, guid: 1518166a286c3384f8edce64200ede61, type: 3}
+    volume: 0.186
+    volumeVariance: 0.231
+    pitch: 0.69
+    pitchVariance: 0.697
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: DoubleJump
+    clip: {fileID: 8300000, guid: 08396cf512fbfde4aa45694db422cac3, type: 3}
+    volume: 0.483
+    volumeVariance: 0.064
+    pitch: 2.43
+    pitchVariance: 0.711
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Dash
+    clip: {fileID: 8300000, guid: 2ebf2421dddc15a45b7fc6ae8197b1c0, type: 3}
+    volume: 0.661
+    volumeVariance: 0.234
+    pitch: 2.09
+    pitchVariance: 0.329
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+--- !u!81 &3037858687666672773
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3037858687666672776}
+  m_Enabled: 1
