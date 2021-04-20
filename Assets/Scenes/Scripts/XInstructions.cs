@@ -5,6 +5,7 @@ using UnityEngine;
 public class XInstructions : MonoBehaviour
 {
     public GameObject uiObject;
+    public GameObject uiObject1;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +16,7 @@ public class XInstructions : MonoBehaviour
         if (other.tag == "SubjectX")
         {
             uiObject.SetActive(true);
+            uiObject1.SetActive(true);
 
         }
     }
@@ -27,5 +29,6 @@ public class XInstructions : MonoBehaviour
     void OnTriggerExit2D(Collider2D other)
     {
         uiObject.SetActive(false);
+        uiObject1.SetActive(false);
     }
 }

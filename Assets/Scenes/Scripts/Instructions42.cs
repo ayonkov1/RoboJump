@@ -5,20 +5,25 @@ using UnityEngine.UI;
 
 public class Instructions42 : MonoBehaviour
 {
-    public GameObject uiObject;
-    public GameObject uiObject1;
+    
+    public GameObject uiObject2;
+    public GameObject uiObject3;
+    public GameObject uiObject4;
     // Start is called before the first frame update
     void Start()
     {
-        uiObject.SetActive(false);
-        uiObject1.SetActive(false);
+        uiObject2.SetActive(false);
+        uiObject3.SetActive(false);
+        uiObject4.SetActive(false);
     }
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Subject42")
         {
-            uiObject.SetActive(true);
-            uiObject1.SetActive(true);
+            
+            uiObject2.SetActive(true);
+            uiObject3.SetActive(true);
+            uiObject4.SetActive(true);
 
         }
     }
@@ -30,7 +35,9 @@ public class Instructions42 : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D other)
     {
-        uiObject.SetActive(false);
-        uiObject1.SetActive(false);
+
+        uiObject2.SetActive(false);
+        uiObject3.SetActive(false);
+        uiObject4.SetActive(false);
     }
 }   
