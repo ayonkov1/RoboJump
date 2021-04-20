@@ -37831,19 +37831,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &168468093 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1090123521631423849, guid: 74290c565255a914ebe955c1df05d9ce, type: 3}
-  m_PrefabInstance: {fileID: 987047287}
-  m_PrefabAsset: {fileID: 0}
---- !u!81 &168468094
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 168468093}
-  m_Enabled: 1
 --- !u!1001 &212682832
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45565,7 +45552,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8527941736390964052, guid: e5ca0d65bb287244b9290f7144f4e7ad, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8527941736390964052, guid: e5ca0d65bb287244b9290f7144f4e7ad, type: 3}
       propertyPath: m_AnchorMax.x
@@ -47589,6 +47576,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 365017033b19a6249a701fbdea6b04e8, type: 3}
+--- !u!1 &2090919825 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5434578033504998889, guid: 365017033b19a6249a701fbdea6b04e8, type: 3}
+  m_PrefabInstance: {fileID: 2090919824}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2090919826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2090919825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27b6bd5750c8cd44e95a0a95099e735a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2099660627
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47803,7 +47807,7 @@ Transform:
   - {fileID: 14579379}
   - {fileID: 305673553}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2142662443
 PrefabInstance:
